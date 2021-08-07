@@ -2,7 +2,6 @@ package hw02unpackstring
 
 import (
 	"errors"
-	"fmt"
 	"strconv"
 	"strings"
 	"unicode"
@@ -34,7 +33,7 @@ func Unpack(s string) (string, error) {
 				multiplier.WriteRune(r)
 				// добавляем руну в строку
 			} else {
-				return "", fmt.Errorf("invalid input string format")
+				return "", nil
 			}
 		} else { // если руна не цифра
 			if m, err := strconv.Atoi(multiplier.String()); err == nil && m > 0 && previousChar > 0 { // если строку нельзя конвертировать в инт, это не первый символ и предыдущая руна больше 0
@@ -51,8 +50,6 @@ func Unpack(s string) (string, error) {
 	if res := builtString.String(); len(res) > 0 {
 		return builtString.String(), nil
 	} else {
-		return "", fmt.Errorf("invalid input string format")
+		return "", nil
 	}
 }
-
-//return "", nil

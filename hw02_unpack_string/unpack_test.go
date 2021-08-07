@@ -3,7 +3,7 @@ package hw02unpackstring
 import (
 	"errors"
 	"testing"
-	"C:\Users\58161\OneDrive\Документы\go-projects\hw-evg\hw02_unpack_string\unpack.go"
+
 	"github.com/stretchr/testify/require"
 )
 
